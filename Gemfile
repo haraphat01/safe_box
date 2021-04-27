@@ -29,6 +29,8 @@ gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) support
 gem "twitter-bootstrap-rails"
 gem 'devise', '~> 4.2'
 gem 'devise-bootstrap-views'
+gem "stock_quote", '~> 3.0.0'
+
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
