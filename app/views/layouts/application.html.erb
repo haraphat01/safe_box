@@ -1,15 +1,53 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>FinanceApp</title>
+    <title> SafeBox App</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+   
   </head>
 
   <body>
-    <%= yield %>
+
+    <div class="navbar navbar-default navbar-static-top">
+     
+        <%= link_to 'SafeBox', root_path, class: "navbar-brand" %>
+        <div class="navbar-collapse collapse navbar-responsive-collapse">
+         
+          <ul class="nav navbar-right col-md-4">
+            <% if current_user %>
+              <li class="col-md-8 user-name">
+                <%= link_to ('<i class="fa fa-user"></i> ' + truncate(current_user.email, length: 25)).html_safe, edit_user_registration_path, title: 'Edit Profile' %>
+              </li>
+              <li class="col-md-1"> </li>
+              <li class="col-md-3 logout"><%= link_to('Logout', destroy_user_session_path, class: 'btn btn-xs btn-danger', title: 'Logout', :method => :delete) %></li>
+            <% else %>
+              <li class="col-md-4 pull-right">
+                <%= link_to('Sign In', new_user_session_path, class: 'btn btn-primary', title: 'Sign In') %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <%= bootstrap_flash %>
+          <%= yield %>
+        </div>
+      </div><!--/row-->
+
+      <footer>
+        <div class="footer navbar-fixed-bottom text-center">
+          <p><b>&copy; SafeBox 2021</b></p>
+        </div>
+      </footer>
+
+    </div> <!-- /container -->
+
   </body>
 </html>
