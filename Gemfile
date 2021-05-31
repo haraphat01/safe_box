@@ -30,6 +30,7 @@ gem "twitter-bootstrap-rails"
 gem 'devise', '~> 4.2'
 gem 'devise-bootstrap-views'
 gem 'rubocop', '>= 1.0', '< 2.0'
+gem 'image_processing', '~> 1.2' #uncomment from Gemfilegem ‘webpacker’
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false

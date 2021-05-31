@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'articles/index'
+  get 'articles/new'
+  get 'articles/create'
+  get 'articles/show'
+  get 'articles/edit'
+  get 'articles/update'
+  get 'articles/destroy'
+  resources :articles
   devise_for :users
   # root :to => 'welcome/index'
   root 'welcome#index'
