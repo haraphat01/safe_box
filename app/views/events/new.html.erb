@@ -1,0 +1,7 @@
+<h1>Events#new</h1>
+<p>Find me in app/views/events/new.html.erb</p>
+<%= form_with scope: :event, url: events_path, local: true do |form| %>
+<p>    <%= form.label :title %><br>    <%= form.text_field :title %>  </p>   
+<p>    <%= form.label :text %><br>    <%= form.rich_text_area :text %>  </p>   
+<p>    <%= form.submit %>  
+<% end %>

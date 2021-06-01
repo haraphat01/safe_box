@@ -1,13 +1,14 @@
 Rails.application.routes.draw do
-  get 'articles/index'
-  get 'articles/new'
-  get 'articles/create'
-  get 'articles/show'
-  get 'articles/edit'
-  get 'articles/update'
-  get 'articles/destroy'
-  resources :articles
+ 
+  get 'events/index'
+  get 'events/new'
+  get 'events/create'
+  get 'events/show'
+  get 'events/edit'
+  get 'events/update'
+  get 'events/destroy'
   devise_for :users
+  resources :events
   # root :to => 'welcome/index'
   root 'welcome#index'
 

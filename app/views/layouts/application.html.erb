@@ -21,7 +21,7 @@
               <li class="col-md user-name">
                 <%= link_to ('<i class="fa fa-user"></i> ' + truncate(current_user.email, length: 25)).html_safe, edit_user_registration_path, title: 'Edit Profile' %>
               </li>
-               <li class="col-md-3 logout"><%= link_to('Create Memory', new_article_path, class: 'btn btn-xs btn-success') %></li>
+               <li class="col-md-3 logout"><%= link_to('Create Memory', new_event_path, class: 'btn btn-xs btn-success') %></li>
 
               <li class="col-md-3 logout"><%= link_to('Logout', destroy_user_session_path, class: 'btn btn-xs btn-danger', title: 'Logout', :method => :delete) %></li>
             <% else %>
