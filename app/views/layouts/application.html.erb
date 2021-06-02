@@ -6,10 +6,30 @@
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    
    
   </head>
 
   <body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <div class="navbar navbar-default navbar-static-top">
      
@@ -18,10 +38,30 @@
          
           <ul class="nav navbar-right col-md-4">
             <% if current_user %>
-              <li class="col-md user-name">
-                <%= link_to ('<i class="fa fa-user"></i> ' + truncate(current_user.email, length: 25)).html_safe, edit_user_registration_path, title: 'Edit Profile' %>
-              </li>
-               <li class="col-md-3 logout"><%= link_to('Create Memory', new_event_path, class: 'btn btn-xs btn-success') %></li>
+
+     <div class="ui compact menu">
+  <div class="ui simple dropdown item">
+
+    <i class="settings icon"></i>
+   Account Settings
+    <i class="dropdown icon"></i>
+    <div class="menu">
+      <div class="item">
+        <%= link_to('Edit Profile', edit_user_registration_path, class: 'item') %>
+      </div>
+      <div class="item">Add Confidants</div>
+      <div class="item">Choice 3</div>
+    </div>
+  </div>
+</div>
+
+
+            
+
+
+
+              
+               <li class="col-md-3 logout"><%= link_to('Create Event', new_event_path, class: 'btn btn-xs btn-success') %></li>
 
               <li class="col-md-3 logout"><%= link_to('Logout', destroy_user_session_path, class: 'btn btn-xs btn-danger', title: 'Logout', :method => :delete) %></li>
             <% else %>
