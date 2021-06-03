@@ -1,28 +1,34 @@
-<% if current_user %>
-  <h3>Welcome: <%= current_user.email %></h3>
-  
-
-  
-<% else %>
-  <div class="jumbotron">
-    <h2>Welcome to Safebox</h2>
-    <p class="lead">
-      One place to keep the secrets you don't want to tell anyone yet </p>
-
-       <p class="lead">
-      We would only share the information with people on your confidant lists only when we stopped hearing from you</p>
-
-       <p class="lead">
-      Nobody can access your information because it's encrypted </p>
-  </div>
-
+<div class="container-fluid">
   <div class="row">
-    <div class="plans clearfix">
-      <div class="col-lg-3 col-lg-offset-3 plan">
-        <h2>Free Plan</h2>
-        <div class="price pull-right">
-          Price: $0
-        </div>
+    <% if current_user %>
+
+      <h3>Welcome: <%= current_user.email %></h3>
+  
+
+  
+    <% else %>
+      <div class="jumbotron">
+       <h2>Welcome to Safebox</h2>
+        <p class="lead">
+            One place to keep the secrets you don't want to tell anyone yet 
+        </p>
+
+        <p class="lead">
+          We would only share the information with people on your confidant lists only when we stopped hearing from you
+        </p>
+
+       <p class="lead">
+          Nobody can access your information because it's encrypted 
+        </p>
+      </div>
+
+    <div class="">
+      <div class="">
+          <div class="col-lg-3 col-md-5 col-sm-10">
+            <h2>Free Plan</h2>
+            <div class="price">
+               Price: $0
+          </div>
         <div class="features">
           <ul>
             <li>Unlimited File Uploads</li>
@@ -37,10 +43,10 @@
       </div>
       <div class="col-lg-3 plan">
         <h2>Amaze Plan</h2>
-        <div class="price pull-right">
+        <div class="price ">
           Price: $20
         </div>
-        <div class="features">
+        <div class="col-lg-3 col-md-5 col-sm-10">
           <ul>
              <li>Unlimited File Uploads</li>
             <li>File Encryption</li>
@@ -57,3 +63,5 @@
     </div>
   </div>
 <% end %>
+  </div>
+</div>

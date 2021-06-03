@@ -12,75 +12,26 @@
   </head>
 
   <body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="navbar navbar-default navbar-static-top">
+    <div class="navbar-style d-flex justify-content-between">
      
         <%= link_to 'SafeBox', root_path, class: "navbar-brand" %>
-        <div class="navbar-collapse collapse navbar-responsive-collapse">
-         
-          <ul class="nav navbar-right col-md-4">
+          <div class="">
             <% if current_user %>
-
-     <div class="ui compact menu">
-  <div class="ui simple dropdown item">
-
-    <i class="settings icon"></i>
-   Account Settings
-    <i class="dropdown icon"></i>
-    <div class="menu">
-      <div class="item">
-        <%= link_to('Edit Profile', edit_user_registration_path, class: 'item') %>
-      </div>
-      <div class="item">Add Confidants</div>
-      <div class="item">Choice 3</div>
-    </div>
-  </div>
-</div>
-
-
-            
-
-
-
-              
-               <li class="col-md-3 logout"><%= link_to('Create Event', new_event_path, class: 'btn btn-xs btn-success') %></li>
-
-              <li class="col-md-3 logout"><%= link_to('Logout', destroy_user_session_path, class: 'btn btn-xs btn-danger', title: 'Logout', :method => :delete) %></li>
-            <% else %>
-              <li class="col-md-4 pull-right">
-                <%= link_to('Sign In', new_user_session_path, class: 'btn btn-primary', title: 'Sign In') %>
-              </li>
-            <% end %>
-          </ul>
+              <%= link_to('Edit Profile', edit_user_registration_path, class: '') %>
+              <%= link_to('Create Event', new_event_path, class: 'btn btn-success') %>
+              <%= link_to('Logout', destroy_user_session_path, class: 'btn btn-danger', title: 'Logout', :method => :delete) %>
         </div>
-      </div>
+        <div class=" flex-end">
+          <% else %>
+            <%= link_to('Sign In', new_user_session_path, class: 'btn btn-primary') %>
+          <% end %>
+        </div>
     </div>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
+ 
           <%= bootstrap_flash %>
           <%= yield %>
-        </div>
-      </div><!--/row-->
+       
 
       <footer>
         <div class="footer navbar-fixed-bottom text-center">

@@ -21,19 +21,21 @@ gem 'jbuilder', '~> 2.7'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-gem 'semantic-ui-sass', '~> 2.2', '>= 2.2.1.1'
+
 gem 'jquery-rails'
 gem 'hirb'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 gem "therubyracer"
+gem 'autoprefixer-rails'
 gem "less-rails" # Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem "twitter-bootstrap-rails"
 gem 'devise', '~> 4.2'
 gem 'devise-bootstrap-views'
 gem 'rubocop', '>= 1.0', '< 2.0'
 gem 'image_processing', '~> 1.2' #uncomment from Gemfilegem ‘webpacker’
+gem 'bootstrap', '~> 5.0.1'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
