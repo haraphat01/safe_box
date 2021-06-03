@@ -3,11 +3,13 @@
     <% if current_user %>
 
       <h3>Welcome: <%= current_user.email %></h3>
-  
+
+     
 
   
     <% else %>
-      <div class="jumbotron">
+
+     <div class="jumbotron">
        <h2>Welcome to Safebox</h2>
         <p class="lead">
             One place to keep the secrets you don't want to tell anyone yet 
@@ -20,33 +22,34 @@
        <p class="lead">
           Nobody can access your information because it's encrypted 
         </p>
-      </div>
+     </div>
 
-    <div class="">
-      <div class="">
-          <div class="col-lg-3 col-md-5 col-sm-10">
-            <h2>Free Plan</h2>
+      <div class="d-flex justify-content-center">
+       <div class="flex-direction-vertical ">
+         <h2>Free Plan</h2>
             <div class="price">
                Price: $0
-          </div>
-        <div class="features">
+           </div>
+        
           <ul>
             <li>Unlimited File Uploads</li>
             <li>File Encryption</li>
             <li>Access anywhere</li>
             <br>
           </ul>
-        </div>
+    
         <p>
           <%= link_to 'Sign Up', new_user_registration_path, class: 'btn btn-primary sign-up' %>
         </p>
-      </div>
-      <div class="col-lg-3 plan">
-        <h2>Amaze Plan</h2>
+       </div> 
+
+
+      <div class=' flex-direction-vertical'>
+         <h2>Amaze Plan</h2>
         <div class="price ">
           Price: $20
         </div>
-        <div class="col-lg-3 col-md-5 col-sm-10">
+      
           <ul>
              <li>Unlimited File Uploads</li>
             <li>File Encryption</li>
@@ -55,13 +58,15 @@
              <li>Upload video</li>
             <li class='extra'>Add confidants</li>
           </ul>
-        </div>
+        
         <p>
           <%= link_to 'Sign Up', new_user_registration_path, class: 'btn btn-primary sign-up' %>
         </p>
       </div>
-    </div>
-  </div>
-<% end %>
+
+      </div>
+
+      
+    <% end %>
   </div>
 </div>

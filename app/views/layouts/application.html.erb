@@ -12,18 +12,19 @@
   </head>
 
   <body>
-    <div class="navbar-style d-flex justify-content-between">
+  
+    <div class="navbar-style ">
      
         <%= link_to 'SafeBox', root_path, class: "navbar-brand" %>
-          <div class="">
+          <div class="d-flex justify-content-end one button_height">
             <% if current_user %>
               <%= link_to('Edit Profile', edit_user_registration_path, class: '') %>
-              <%= link_to('Create Event', new_event_path, class: 'btn btn-success') %>
-              <%= link_to('Logout', destroy_user_session_path, class: 'btn btn-danger', title: 'Logout', :method => :delete) %>
+              <%= link_to('Create Event', new_event_path, class: 'btn btn-primary button_height') %>
+              <%= link_to('Logout', destroy_user_session_path, class: 'btn btn-danger button_height', title: 'Logout', :method => :delete) %>
         </div>
-        <div class=" flex-end">
+        <div class=" d-flex justify-content-end">
           <% else %>
-            <%= link_to('Sign In', new_user_session_path, class: 'btn btn-primary') %>
+            <%= link_to('Sign In', new_user_session_path, class: 'btn btn-primary button_height') %>
           <% end %>
         </div>
     </div>
