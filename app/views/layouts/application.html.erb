@@ -24,7 +24,9 @@
         </div>
         <div class=" d-flex justify-content-end">
           <% else %>
+           <%= link_to('Case Studies', '#', class: 'btn btn-primary button_height') %>
             <%= link_to('Sign In', new_user_session_path, class: 'btn btn-primary button_height') %>
+            
           <% end %>
         </div>
     </div>
